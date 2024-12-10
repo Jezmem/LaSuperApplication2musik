@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaSuperApplication2Musik</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Profil Spotify</h1>
+        </header>
+
+        <div class="grid">
+            <section id="profile" class="card">
+                <div class="profile-header">
+                    <div id="imgUrl"></div>
+                    <h2 id="displayName"></h2>
+                </div>
+                
+                <div class="profile-details">
+                    <dl>
+                        <dt>User ID</dt>
+                        <dd id="id"></dd>
+
+                        <dt>Email</dt>
+                        <dd id="email"></dd>
+
+                        <dt>Profil Spotify</dt>
+                        <dd>
+                            <a id="uri" href="#" target="_blank">Spotify URI</a>
+                        </dd>
+
+                        <dt>Lien externe</dt>
+                        <dd>
+                            <a id="url" href="#" target="_blank">Liens vers le profil</a>
+                        </dd>
+                    </dl>
+                </div>
+            </section>
+
+            <section id="music-section" class="card">
+                <div id="search-container">
+                    <h2>Rechercher une musiK</h2>
+                    <input 
+                        type="search" 
+                        id="search" 
+                        placeholder="Rechercher un artiste, titre ou album"
+                        aria-label="Recherche musicale"
+                    />
+                    <p id="searchResultsNumber"></p>
+                </div>
+
+                <div id="results-container">
+                    <ul id="searchResults"></ul>
+                </div>
+            </section>
+        </div>
+
+        <section id="player-section" class="card">
+            <h2>Lecteur</h2>
+            <div id="embed-iframe"></div>
+        </section>
+
+        <section id="playlists" class="card">
+            <h2>Artistes Suivis</h2>
+            <div class="artists-grid">
+                <ul id="playlistsList"></ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+    <script src="src/script.js" type="module"></script>
+</body>
+</html>
